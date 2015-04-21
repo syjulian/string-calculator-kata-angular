@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('StringCalculator').value('StringCalculatorService', 
-  function() {
-    return 0;
+  function(str) {
+    return +str;
 });

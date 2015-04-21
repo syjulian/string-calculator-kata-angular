@@ -10,4 +10,10 @@ describe('StringCalculator', function() {
 
     expect(stringCalculatorService('')).toEqual(0);
   }));
+
+  it('should return numeric value of string', inject(function(_StringCalculatorService_) {
+    stringCalculatorService = _StringCalculatorService_;
+
+    expect(stringCalculatorService('42')).toEqual(42);
+  }));
 });
