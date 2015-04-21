@@ -36,4 +36,8 @@ describe('StringCalculator', function() {
   it('should throw an error when there is a negative number', function() {
     expect(() => { stringCalculatorService('1,2,-1'); }).toThrow();
   });
+
+  it('should use a custom delimiter if it is in first line', function() {
+    expect(stringCalculatorService('//#\n23#25#27')).toEqual(75);
+  });
 });

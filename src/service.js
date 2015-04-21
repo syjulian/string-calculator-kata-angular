@@ -2,7 +2,9 @@
 
 angular.module('StringCalculator').value('StringCalculatorService', 
   function(str) {
-    return str.split(/\,|\n/)
+    var delimiter = (str.match(/\/\/(.)\n/) || [/\,|\n/]).pop();
+
+    return str.split(delimiter)
       .filter((e) => { return +e <= 1000; })
       .reduce((acc, e) => { 
         if(+e < 0) throw new Error();
