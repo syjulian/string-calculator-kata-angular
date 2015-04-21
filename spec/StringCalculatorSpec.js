@@ -20,4 +20,8 @@ describe('StringCalculator', function() {
   it('should return sum of comma-delimited numbers', function() {
     expect(stringCalculatorService('13,14,15')).toEqual(42);
   });
+
+  it('should return sum of newline-delimited numbers', function() {
+    expect(stringCalculatorService('15\n16\n17')).toEqual(48);
+  });
 });
