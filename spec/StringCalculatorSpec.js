@@ -40,4 +40,8 @@ describe('StringCalculator', function() {
   it('should use a custom delimiter if it is in first line', function() {
     expect(stringCalculatorService('//#\n23#25#27')).toEqual(75);
   });
+
+  it('should use a multi-char custom delimiter if it is in first line', function() {
+    expect(stringCalculatorService('//[#!!]\n13#!!15#!!37')).toEqual(65);
+  });
 });
