@@ -1,0 +1,25 @@
+{
+  "name": "string-calculator-kata-angular",
+  "version": "0.0.0",
+  "authors": [
+    "syjulian <jns0019@uah.edu>"
+  ],
+  "main": "src/app.js",
+  "keywords": [
+    "tdd",
+    "kata",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15",
+    "angular-mocks": "~1.3.15"
+  }
+}
