@@ -3,7 +3,8 @@ String Calculator Kata done in Angular
 
 Used to learn TDD
 
-Main Tests
+####Main Tests
+
 1. should return 0 when given an empty string
 2. should return numeric value of string
 3. should return sum of comma-delimited numbers
