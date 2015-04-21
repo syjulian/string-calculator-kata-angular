@@ -24,4 +24,8 @@ describe('StringCalculator', function() {
   it('should return sum of newline-delimited numbers', function() {
     expect(stringCalculatorService('15\n16\n17')).toEqual(48);
   });
+
+  it('should return sum of both comma and newline delimited numbers', function() {
+    expect(stringCalculatorService('11,22\n33')).toEqual(66);
+  });
 });
