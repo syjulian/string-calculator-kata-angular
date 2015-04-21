@@ -1,15 +1,13 @@
 'use strict';
 
-describe("StringCalculator", function() {
+describe('StringCalculator', function() {
   var stringCalculatorService;
 
   beforeEach(module('StringCalculator'));
 
-  it('should load angular', () => {
-    expect(angular).toBeDefined();
-  });
+  it('should return 0 when given an empty string', inject(function(_StringCalculatorService_) {
+    stringCalculatorService = _StringCalculatorService_;
 
-  it('should have the app registered', () => {
-    expect(angular.module('StringCalculator')).toBeDefined();
-  });
+    expect(stringCalculatorService('')).toEqual(0);
+  }));
 });
