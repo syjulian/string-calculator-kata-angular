@@ -28,4 +28,8 @@ describe('StringCalculator', function() {
   it('should return sum of both comma and newline delimited numbers', function() {
     expect(stringCalculatorService('11,22\n33')).toEqual(66);
   });
+
+  it('should ignore numbers greater than 1000', function() {
+    expect(stringCalculatorService('11,22\n1001')).toEqual(33);
+  });
 });
