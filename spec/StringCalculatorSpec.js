@@ -5,15 +5,19 @@ describe('StringCalculator', function() {
 
   beforeEach(module('StringCalculator'));
 
-  it('should return 0 when given an empty string', inject(function(_StringCalculatorService_) {
+  beforeEach(inject(function(_StringCalculatorService_) {
     stringCalculatorService = _StringCalculatorService_;
-
-    expect(stringCalculatorService('')).toEqual(0);
   }));
 
-  it('should return numeric value of string', inject(function(_StringCalculatorService_) {
-    stringCalculatorService = _StringCalculatorService_;
+  it('should return 0 when given an empty string', function() {
+      expect(stringCalculatorService('')).toEqual(0);
+  });
 
+  it('should return numeric value of string', function(){
     expect(stringCalculatorService('42')).toEqual(42);
-  }));
+  });
+
+  it('should return sum of comma-delimited numbers', function() {
+    expect(stringCalculatorService('13,14,15')).toEqual(42);
+  });
 });
